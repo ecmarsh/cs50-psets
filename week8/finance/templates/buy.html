@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+
+    <h2 class="mb-1 text-primary">Buy</h2>
+    <p class="text-muted mb-3">Cash Balance: {{ cb }}</p>
+    <form action="/buy" method="post">
+
+        <div class="form-row">
+            <span class="col-sm-2">&nbsp;</span>
+            <input name="symbol"
+                autocomplete="off"
+                autofocus
+                class="form-control col-sm-5"
+                placeholder="Stock symbol..."
+                type="text"
+                required
+                minLength="1"
+                maxLength="6">
+            <input name="shares"
+                required
+                autocomplete="off"
+                class="form-control col-sm-3 ml-1"
+                placeholder=" # Shares"
+                type="number"
+                min="1">
+            <span class="col-sm-2">&nbsp;</span>
+        </div>
+
+        <div class="form-row">
+            <span class="col-sm-3">&nbsp;</span>
+            <button class="btn btn-primary mt-2 col-sm-6 ml-1" type="submit">
+                Purchase
+            </button>
+            <span class="col-sm-3">&nbsp;</span>
+        </div>
+
+    </form>
+{% endblock %}

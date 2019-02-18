@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h2 class="mb-4 text-secondary">Your Transactions</h2>
+    <div class="table-wrapper" >
+        <table id="history" class="display" style="width:100%">
+            <thead>
+                <th>Date</th>
+                <th>Symbol<br><small>Name</small></th>
+                <th>Bought/Sold</th>
+                <th>Transaction Price</th>
+                <th>Quantity</th>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                    <tr>
+                        <td class="date">{{transaction['date']}}<br><small>{{ transaction["time"] }}</td>
+                        <td><strong>{{ transaction["symbol"] }}</strong><br><small>{{ transaction["name"] }}</small></td>
+                        <td class="text-uppercase">{{ transaction["type"] }}</td>
+                        <td>{{ transaction["price"] }}</td>
+                        <td>{{ transaction["shares"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#history').DataTable();
+        });
+
+
+    </script>
+
+{% endblock %}

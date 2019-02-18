@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <h2 class="mb-4 text-secondary">Quote</h2>
+    <form action="/quote" method="post">
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Search quotes..." type="text" validate minLength="1" maxLength="6">
+        <button class="btn btn-primary ml-2 mb-1" type="submit">Search</button>
+    </div>
+    </form>
+{% endblock %}
