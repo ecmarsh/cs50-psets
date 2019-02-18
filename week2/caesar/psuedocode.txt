@@ -1,0 +1,19 @@
+Get key from command line argument
+Validate the key
+  if(there isn't exatctly two args)
+    print correct usage
+    break
+  if(any of the letters aren't alphabetic)
+    print correct usage
+    break
+  else
+    convert the string into the number
+Prompt the user for the plain text
+encipher the plain text
+  for each character in key
+    if (key is alphabetic)
+      preserve the case
+      shift character is position plus key mod 26
+print the cipher text
+return success
+

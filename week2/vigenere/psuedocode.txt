@@ -1,0 +1,20 @@
+Get key
+Validate the key
+  if(there is more than one key)
+    print correct usage
+    exit
+  if(any letter is a digit)
+    print correct usage
+    exit
+get the plaintext
+encipher
+  loop through each letter in keyword
+    if( isalpha )
+      increment counter
+      if(it is lower)
+        return same
+      if(its upper)
+        preserve capitalization
+one character
+entire plaintext
+print cipher text
