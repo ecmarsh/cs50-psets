@@ -1,0 +1,150 @@
+main {
+    height: 80vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: white;
+}
+
+header>h1 {
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#main,
+h1.main {
+    background-image: linear-gradient(105deg, #191654, #43c6ac);
+}
+
+#main-intro,
+h1.intro {
+    background-image: linear-gradient(105deg, #96c93d, #00b09b);
+}
+
+#main-about,
+h1.about {
+    background-image: linear-gradient(105deg, #1f1c18, #8e0e00);
+}
+
+#main-hobby,
+h1.hobby {
+    background-image: linear-gradient(105deg, #f0cb35, #c02425);
+}
+
+#main-secret-page,
+h1.hobby {
+    background-image: linear-gradient(105deg, #ffaf7b, #d76d77, #3a1c71);
+}
+
+.jumbo-wrapper {
+    padding: 4rem;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+a {
+    color: #000000;
+    transition: all .2s ease-in-out;
+}
+
+a:hover {
+    color: #434343;
+    text-decoration: none;
+}
+
+a[role="button"] {
+    box-shadow: 1px 3px 5px rgba(255, 255, 255, .2);
+    transition: box-shadow .5s ease;
+}
+
+a[role="button"]:hover {
+    box-shadow: 2px 4px 9px rgba(255, 255, 255, .4);
+}
+
+nav>ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list-desk li:not(:last-child) {
+    padding-right: 2rem;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.upper {
+    text-transform: uppercase !important;
+}
+
+.mobile-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 1s ease-out;
+}
+
+.mobile-nav--active {
+    transform: translate3d(0rem, 0, 0);
+    box-shadow: -1rem 0 5px rgba(0, 0, 0, .5);
+    border-right: 1px solid white;
+}
+
+.nav-wrapper {
+    height: 100%;
+    padding: 1rem;
+    background-color: #434343;
+}
+
+.nav-wrapper>ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 10vh;
+    width: 33vw;
+}
+
+.nav-list>li {
+    padding: 1rem 0;
+}
+
+.nav-list>li:not(:last-child) {
+    border-bottom: solid 1px #eee;
+}
+
+#close {
+    color: white;
+    margin-right: 2rem;
+}
+
+#open {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+#open:hover {
+    cursor: pointer;
+}
+
+.line {
+    width: 1.8rem;
+    height: 2px;
+    background-color: #434343;
+    margin: 5px 0;
+}

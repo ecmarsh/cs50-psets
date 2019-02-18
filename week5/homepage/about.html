@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Ethan's Page - About</title>
+</head>
+
+<body>
+    <aside class="mobile-nav">
+        <div class="nav-wrapper">
+            <button type="button" class="close" id="close" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            <ul class="nav-list">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/intro.html">Intro</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/hobby.html">Hobby</a></li>
+            </ul>
+        </div>
+    </aside>
+    <header class="text-light">
+        <h1 class="about">Ethan's Website</h1>
+        <nav class="nav d-none d-md-block">
+            <ul class="nav-list-desk">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/intro.html">Intro</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/hobby.html">Hobby</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="open" class="d-md-none">
+            <span class="line">&nbsp;</span>
+            <span class="line">&nbsp;</span>
+            <span class="line">&nbsp;</span>
+        </button>
+    </header>
+
+    <main id="main-about">
+        <section class="welcome">
+            <div class="jumbo-wrapper">
+                <div class="jumbotron jumbotron-fluid">
+                    <h2 class="display-4 text-white">A Little About Me</h2>
+                    <p class="lead text-white">I like to run! 🏃‍♂</p>
+                    <hr style="border: .5px solid white; margin: 2rem 0">
+                    <p class="text-white upper">CLICK HERE TO GO TO NEXT PAGE️</p>
+                    <a class="btn btn-primary btn-lg" href="/hobby.html" role="button">Hobby</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>
+                <small class="text-muted">&copy; 2018 by <span class="llamo">ethan-marsh</span>.</small>
+            </p>
+            <p style="font-size: smaller">
+                Visit<a href="https://username.github.io"> actual site</a> with portfolio powered by React.js.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        var mobNav = document.querySelector('aside');
+        var buttonOpen = document.querySelector('#open').addEventListener('click', function (e) {
+            if (mobNav) {
+                mobNav.classList.add('mobile-nav--active');
+            }
+        });
+        var buttonClose = document.querySelector('#close').addEventListener('click', function (e) {
+            mobNav.classList.remove('mobile-nav--active');
+        });
+    </script>
+
+</body>
+
+</html>
