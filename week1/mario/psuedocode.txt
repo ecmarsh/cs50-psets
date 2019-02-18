@@ -1,0 +1,5 @@
+ask user for an integer between 1 and 8
+  if the integer is between 1 and 8
+    print the response w/ bars
+  else
+    ask the user again until they cooperate
