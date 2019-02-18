@@ -1,0 +1,24 @@
+open memory card file
+    fopen file
+    check it is not null
+find beginning of JPEG
+    look for first 3 bytes
+        0xff 0xd8 0xff
+    look for last byte:
+        0xe00, oxe1, 0xe2, ... 0xef
+    stored side by side
+    each block is 512 bytes
+open a new JPEG
+write 512 bytes until new jpeg IS FOUND
+detect end of file
+
+open card file
+repeat until end of card
+    read 512 bytes into a buffer
+    start of a new JPEG?
+        yes -> ... then we start a jpeg
+        no -> ... then we ask if already found JPEG
+    already found a JPEG? 
+        no -> ... discard previous 512 
+        yes -> ... close previous then open a new one
+close any remaining files

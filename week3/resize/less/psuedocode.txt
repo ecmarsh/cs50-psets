@@ -1,0 +1,31 @@
+get command line arguments
+validate command line arguments
+    number ?
+    file -r ?
+    file -w ?
+open input file
+update outfiles header info
+    file size (bfSize = bi.biSizeImage + sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER);
+    image size (biSizeImage = ((sizeof(RGBTRIPLE) * bi.biWidth) + padding) * abs(bi.biHeight) ==> bytes;
+    width (biWidth)
+        new = bi.biWidth *= n
+    height (biHeight)
+        new = bi.biHeight *=n
+read infiles scanline pixel by pixel
+resize horizontally
+    for each pixel in row, write n times (R G B each)
+        write to outfile n times
+            fwrite(data, size, number, outputr FILE *to write to)
+        write outfile's padding
+        skip over infile's padding
+remember padding
+    (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4
+resize vertically
+    for each row
+        for n - 1 times
+            write pixels, padding to outfile
+            send infile cursor back
+        write pixels, padding to outfile
+        skip over infile padding
+
+

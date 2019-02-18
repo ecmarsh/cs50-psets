@@ -1,0 +1,8 @@
+open the file
+update header's info for that file
+for each pixel
+  read clue's scanline
+  if (pixel is red)
+    change color of pixel
+  write verdicts scanline
+return success
