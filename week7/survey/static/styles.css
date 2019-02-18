@@ -1,0 +1,28 @@
+#sheet_length, #sheet_info {
+    float: left;
+}
+
+#sheet_filter, #sheet_paginate {
+    float: right;
+}
+
+#sheet {
+    margin: 2rem 0 2rem;
+}
+
+thead {
+    background-color: #6B818C;
+    color: white;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+tbody {
+    background-color: #EEE5E9;
+    color: #08415C;
+}
+
+tr {
+    border-bottom: #6B818C 1px solid;
+}
+

@@ -1,0 +1,68 @@
+{% extends "layout.html" %} {% block main %}
+
+<!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+<h1 class="mb-3">Form</h1>
+
+<!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+<form action="/form" method="post" id="form">
+    <fieldset>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control input" id="name" placeholder="Name" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" name="email" class="form-control input" id="email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="difficulty">On a scale from 1-5, how hard is this pset?</label>
+            <select class="form-control input" id="difficulty" name="difficulty">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="score">What do you think you'll score on this pset?</label>
+            <select class="form-control input" id="score" name="score">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input input" type="checkbox" id="agree" name="agree" value="true" required>
+                <label class="form-check-label" for="agree">
+                    I agree to the terms and conditions
+                 </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="about">About</label>
+            <input type="text" name="about" required minLength="1" class="form-control input" id="about" placeholder="Please say a few words about yourself..." >
+        </div>
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </fieldset>
+</form>
+
+<script type="text/babel">
+    let formInfo = Array.from(document.querySelectorAll('.form-group .input'));
+
+    document.querySelector('#form').onsubmit = (e) => {
+        for (let input of formInfo) {
+            if (!input.value) {
+                alert(`You must fill in the ${input.id} field.`);
+                return false;
+            }
+            return true;
+        }
+    }
+</script>
+
+{% endblock %}

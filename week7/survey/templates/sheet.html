@@ -1,0 +1,39 @@
+{% extends "layout.html" %} {% block main %}
+
+<div class="table-wrapper">
+    <table id="sheet" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Difficulty</th>
+                <th>Score</th>
+                <th>About</th>
+                <th>Agree</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for row in answers %}
+             <tr>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['email'] }}</td>
+                <td>{{ row['difficulty'] }}</td>
+                <td>{{ row['score'] }}</td>
+                <td>{{ row['about'] }}</td>
+                <td>{{ row['agree'] }}</td>
+              </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+</div>
+
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#sheet').DataTable();
+    });
+</script>
+{% endblock %}
